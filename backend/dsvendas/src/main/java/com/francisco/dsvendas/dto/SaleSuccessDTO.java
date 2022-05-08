@@ -1,8 +1,8 @@
-package com.systempro.dsvendas.dto;
+package com.francisco.dsvendas.dto;
 
 import java.io.Serializable;
 
-import com.systempro.dsvendas.entities.Seller;
+import com.francisco.dsvendas.entities.Seller;
 
 public class SaleSuccessDTO implements Serializable {
 	private static final long serialVersionUID = 1L;

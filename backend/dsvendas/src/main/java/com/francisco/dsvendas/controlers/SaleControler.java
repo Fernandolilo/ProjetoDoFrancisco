@@ -1,4 +1,4 @@
-package com.systempro.dsvendas.controlers;
+package com.francisco.dsvendas.controlers;
 
 import java.util.List;
 
@@ -10,37 +10,35 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.systempro.dsvendas.dto.SaleDTO;
-import com.systempro.dsvendas.dto.SaleSuccessDTO;
-import com.systempro.dsvendas.dto.SaleSumDTO;
-import com.systempro.dsvendas.services.SaleService;
-
+import com.francisco.dsvendas.dto.SaleDTO;
+import com.francisco.dsvendas.dto.SaleSuccessDTO;
+import com.francisco.dsvendas.dto.SaleSumDTO;
+import com.francisco.dsvendas.services.SaleService;
 
 @RestController
-@RequestMapping(value= "/sales")
+@RequestMapping(value = "/sales")
 public class SaleControler {
 
 	@Autowired
 	private SaleService service;
-	
+
 	@GetMapping
-	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable){
+	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {
 		Page<SaleDTO> list = service.findAll(pageable);
 		return ResponseEntity.ok(list);
-		
+
 	}
-	
-	@GetMapping(value ="/amount-by-seller")
+
+	@GetMapping(value = "/amount-by-seller")
 	public ResponseEntity<List<SaleSumDTO>> amountGroupedBySeller() {
 		List<SaleSumDTO> list = service.amountGroupedBySeller();
 		return ResponseEntity.ok(list);
 	}
-	
-	@GetMapping(value ="/success-by-seller")
+
+	@GetMapping(value = "/success-by-seller")
 	public ResponseEntity<List<SaleSuccessDTO>> successGroupedBySeller() {
 		List<SaleSuccessDTO> list = service.successGroupedBySeller();
 		return ResponseEntity.ok(list);
 	}
-	
-	
+
 }

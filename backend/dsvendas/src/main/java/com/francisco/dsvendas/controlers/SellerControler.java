@@ -1,4 +1,4 @@
-package com.systempro.dsvendas.controlers;
+package com.francisco.dsvendas.controlers;
 
 import java.util.List;
 
@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.systempro.dsvendas.dto.SellerDTO;
-import com.systempro.dsvendas.services.SellerSevice;
+import com.francisco.dsvendas.dto.SellerDTO;
+import com.francisco.dsvendas.services.SellerSevice;
 
 @RestController
-@RequestMapping(value= "/sellers")
+@RequestMapping(value = "/sellers")
 public class SellerControler {
 
 	@Autowired
 	private SellerSevice service;
-	
+
 	@GetMapping
-	public ResponseEntity<List<SellerDTO>> findAll(){
-		List<SellerDTO> list =service.findAll();
+	public ResponseEntity<List<SellerDTO>> findAll() {
+		List<SellerDTO> list = service.findAll();
 		return ResponseEntity.ok(list);
-		
+
 	}
 }

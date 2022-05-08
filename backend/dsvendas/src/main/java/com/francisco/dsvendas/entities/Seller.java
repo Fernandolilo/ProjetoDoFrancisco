@@ -1,4 +1,4 @@
-package com.systempro.dsvendas.entities;
+package com.francisco.dsvendas.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,31 +11,27 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
-
 @Entity
-@Table(name="tb_sellers")
-public class Seller implements Serializable{
+@Table(name = "tb_sellers")
+public class Seller implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	
+
 	@OneToMany(mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>();
-	
-	public Seller() {	
+
+	public Seller() {
 	}
-	
-	
+
 	public Seller(Long id, String nome) {
 		super();
 		this.id = id;
 		this.name = nome;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -45,14 +41,11 @@ public class Seller implements Serializable{
 		return result;
 	}
 
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Seller other = (Seller) obj;
 		if (id == null) {
@@ -63,29 +56,24 @@ public class Seller implements Serializable{
 		return true;
 	}
 
-
 	public Long getId() {
 		return id;
 	}
-
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-
 	public String getName() {
 		return name;
 	}
-
 
 	public void setNome(String name) {
 		this.name = name;
 	}
 
-
 	public List<Sale> getSales() {
 		return sales;
 	}
-	
+
 }
