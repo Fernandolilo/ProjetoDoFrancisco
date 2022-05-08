@@ -1,4 +1,4 @@
-package com.francisco.dsvendas.controlers;
+package com.yollanda.dsvendas.controlers;
 
 import java.util.List;
 
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.francisco.dsvendas.dto.SaleDTO;
-import com.francisco.dsvendas.dto.SaleSuccessDTO;
-import com.francisco.dsvendas.dto.SaleSumDTO;
-import com.francisco.dsvendas.services.SaleService;
+import com.yollanda.dsvendas.dto.SaleDTO;
+import com.yollanda.dsvendas.dto.SaleSuccessDTO;
+import com.yollanda.dsvendas.dto.SaleSumDTO;
+import com.yollanda.dsvendas.services.SaleService;
 
 @RestController
 @RequestMapping(value = "/sales")

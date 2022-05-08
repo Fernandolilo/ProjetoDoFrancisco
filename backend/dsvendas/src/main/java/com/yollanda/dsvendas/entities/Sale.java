@@ -1,4 +1,4 @@
-package com.francisco.dsvendas.entities;
+package com.yollanda.dsvendas.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;

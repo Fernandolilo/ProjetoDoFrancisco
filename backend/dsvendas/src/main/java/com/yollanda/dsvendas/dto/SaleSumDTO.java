@@ -1,8 +1,8 @@
-package com.francisco.dsvendas.dto;
+package com.yollanda.dsvendas.dto;
 
 import java.io.Serializable;
 
-import com.francisco.dsvendas.entities.Seller;
+import com.yollanda.dsvendas.entities.Seller;
 
 public class SaleSumDTO implements Serializable {
 	private static final long serialVersionUID = 1L;

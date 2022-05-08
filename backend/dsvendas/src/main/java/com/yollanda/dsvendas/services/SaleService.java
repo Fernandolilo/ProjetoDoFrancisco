@@ -1,4 +1,4 @@
-package com.francisco.dsvendas.services;
+package com.yollanda.dsvendas.services;
 
 import java.util.List;
 
@@ -8,12 +8,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.francisco.dsvendas.dto.SaleDTO;
-import com.francisco.dsvendas.dto.SaleSuccessDTO;
-import com.francisco.dsvendas.dto.SaleSumDTO;
-import com.francisco.dsvendas.entities.Sale;
-import com.francisco.dsvendas.repositories.SaleRepository;
-import com.francisco.dsvendas.repositories.SellerRepository;
+import com.yollanda.dsvendas.dto.SaleDTO;
+import com.yollanda.dsvendas.dto.SaleSuccessDTO;
+import com.yollanda.dsvendas.dto.SaleSumDTO;
+import com.yollanda.dsvendas.entities.Sale;
+import com.yollanda.dsvendas.repositories.SaleRepository;
+import com.yollanda.dsvendas.repositories.SellerRepository;
 
 @Service
 public class SaleService {

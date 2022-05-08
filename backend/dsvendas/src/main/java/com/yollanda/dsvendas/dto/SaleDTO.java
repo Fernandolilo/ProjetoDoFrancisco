@@ -1,8 +1,8 @@
-package com.francisco.dsvendas.dto;
+package com.yollanda.dsvendas.dto;
 
 import java.time.LocalDate;
 
-import com.francisco.dsvendas.entities.Sale;
+import com.yollanda.dsvendas.entities.Sale;
 
 public class SaleDTO {
 
